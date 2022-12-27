@@ -28,8 +28,11 @@ const ObatSchema = new Schema({
       required: [true, 'harga obat harus diisi']
    },
    produsen: {
-      type: String,
-      required: [true, 'produsen obat harus diisi']
+      type: mongoose.Types.ObjectId,
+      ref: 'Pabrik',
+      required: true
    },
 
 });
+
+module.exports = model('Obat', ObatSchema)
