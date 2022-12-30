@@ -1,9 +1,9 @@
-// const { create } = require('../model/Pabrik')
+
 const Factory = require('../model/Pabrik')
 
 const GetAll = async (req, res) => {
    try {
-      const factory = await Factory.find().populate('produsen').sort({ kode: 1 });
+      const factory = await Factory.find();
       res.status(200).json({data: factory})
    } catch (err) {
       res.status(500).json({ message: err.message })
