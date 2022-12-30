@@ -27,6 +27,10 @@ const ObatSchema = new Schema({
       type: Number,
       required: [true, 'Silahkan Masukkan Harga Obat...!']
    },
+   expired: {
+      type: Date,
+      required: [true, 'Silahkan Masukkan Tanggal Kadaluarasa']
+   },
    produsen: {
       type: mongoose.Types.ObjectId,
       ref: 'Pabrik',
