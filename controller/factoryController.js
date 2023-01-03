@@ -1,4 +1,3 @@
-
 const Factory = require('../model/Pabrik')
 
 const GetAll = async (req, res) => {
@@ -24,6 +23,3 @@ module.exports = {
    GetAll,
    create
 }
-
-
-
